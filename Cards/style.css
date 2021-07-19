@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.simple-card-container {
+	display: flex;
+	justify-content: space-evenly;
+	width: 90%;
+	margin: auto;
+}
+
+.simple-card {
+	padding: 20px 30px;
+	margin-top: 2rem;
+	box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.4);
+	width: 240px;
+	border-radius: 8px;
+	height: 75vh;
+	transition: all 0.2s ease-in-out;
+}
+
+.simple-card:hover {
+	transform: translateY(-5px);
+}
+
+.simple-card p {
+	font-size: 12px;
+}
+
+.img-container {
+	text-align: center;
+}
+
+.img-container img {
+	width: 40%;
+	margin-bottom: 1rem;
+}
+
+.text-container {
+	text-align: center;
+}
+
+.text-container .btn {
+	padding: 5px 10px;
+	margin: 10px;
+	border: none;
+	background: #f52e5d;
+	color: #fff;
+	border-radius: 4px;
+	outline: none;
+	cursor: pointer;
+}
+
+.text-container .btn:hover {
+	background: none;
+	border: 1px solid #f52e5d;
+	color: #f52e5d;
+}
+
+.fold-card-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #fbe9ef;
+	margin-top: 2rem;
+}
+
+.fold-card {
+	position: relative;
+	width: 300px;
+	height: 350px;
+	background: white;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+	box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+	transition: 1s;
+}
+
+.fold-card:hover {
+	transform: translateX(50%);
+}
+
+.fold-card .imgBox {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	background: #fff;
+	transition: 1s;
+	box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.fold-card:hover .imgBox {
+	transform: rotateY(-180deg);
+}
+
+.fold-card .imgBox img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+}
+
+.fold-card .imgBox img:nth-child(2) {
+	transform: rotateY(180deg);
+}
+
+.fold-card .details {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.fold-card .details .content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.fold-card .details .content h2 {
+	text-align: center;
+	font-weight: 700;
+	line-height: 1em;
+}
+
+.fold-card .details .content h2 span {
+	color: #f52e5d;
+	font-size: 0.8em;
+}
+
+.fold-card .details .content .social-icons {
+	position: relative;
+	display: flex;
+	margin-top: 10px;
+}
+
+.fold-card .details .content .social-icons a {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background: #333;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	margin: 5px;
+	transition: 0.2s;
+}
+
+.fold-card .details .content .social-icons a:hover {
+	background: #f52e5d;
+}
