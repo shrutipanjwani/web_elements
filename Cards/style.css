@@ -22,9 +22,9 @@ body {
 	padding: 20px 30px;
 	margin-top: 2rem;
 	box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.4);
-	width: 240px;
+	width: 300px;
 	border-radius: 8px;
-	height: 75vh;
+	height: 50vh;
 	transition: all 0.2s ease-in-out;
 }
 
@@ -33,7 +33,7 @@ body {
 }
 
 .simple-card p {
-	font-size: 12px;
+	font-size: 16px;
 }
 
 .img-container {
@@ -41,7 +41,7 @@ body {
 }
 
 .img-container img {
-	width: 40%;
+	width: 60%;
 	margin-bottom: 1rem;
 }
 
