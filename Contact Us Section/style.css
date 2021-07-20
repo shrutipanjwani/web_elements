@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.contact-container {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+}
+
+.contact-box {
+	display: flex;
+	/* background: white; */
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	width: 80%;
+	height: 80vh;
+	margin: auto;
+	position: relative;
+	top: 10%;
+}
+
+.contact-box .map {
+	width: 40%;
+}
+
+.contact-box .form-container {
+	padding: 20px;
+}
+
+.contact-box .form-container h1 {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.contact-box .form-container .btn {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 10px 20px;
+	border: none;
+	outline: none;
+	border-radius: 2px;
+	background: #fff;
+	color: #f794a4;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.contact-box .form-container p {
+	display: flex;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 45vw;
+}
+
+form input,
+form textarea {
+	margin: 5px 0px;
+	padding: 10px;
+	width: 100%;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid #fff;
+	background: none;
+	font-size: 16px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+	color: #fff;
+}
+
+.p-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.p-container i {
+	font-size: 20px;
+	color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+	.contact-box {
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		height: 98vh;
+		margin: auto;
+	}
+	.contact-container {
+		height: 120vh;
+	}
+	.contact-box .map {
+		width: 100%;
+	}
+	.contact-box .form-container h1 {
+		font-size: 22px;
+	}
+	.contact-box .form-container {
+		padding: 10px 20px;
+	}
+	.p-container {
+		flex-direction: column;
+	}
+	.p-container p {
+		margin-bottom: 0.5rem;
+	}
+	form {
+		width: 80vw;
+	}
+	form input,
+	form textarea {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	form {
+		width: 70vw;
+	}
+}
