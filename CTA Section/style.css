@@ -10,3 +10,158 @@
 body {
 	overflow-x: hidden;
 }
+
+.btn-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.btn {
+	box-sizing: border-box;
+	appearance: none;
+	background-color: transparent;
+	border: 2px solid #e74c3c;
+	border-radius: 0.5em;
+	cursor: pointer;
+	display: flex;
+	align-self: center;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1;
+	margin: 20px;
+	padding: 1.2em 2.8em;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.btn:hover,
+.btn:focus {
+	color: #fff;
+	outline: 0;
+}
+
+.first {
+	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.first:hover {
+	box-shadow: 0 0 40px 40px #e74c3c inset;
+}
+
+.second {
+	border-color: #3498db;
+	color: #fff;
+	box-shadow: 0 0 40px 40px #3498db inset;
+	transition: all 150ms ease-in-out;
+}
+
+.second:hover {
+	box-shadow: 0 0 10px 0 #3498db inset, 0 0 8px 4px #3498db;
+	color: #3498db;
+}
+
+.third {
+	border-color: #f1c40f;
+	background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+	background-position: 100%;
+	background-size: 400%;
+	transition: background 300ms ease-in-out;
+}
+
+.third:hover {
+	background-position: 0%;
+	color: #fff;
+}
+
+.fourth {
+	border-color: #8e44ad;
+	border-radius: 0;
+	color: #8e44ad;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	transition: color 150ms ease-in-out;
+}
+
+.fourth:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	display: block;
+	transform: translateX(-50%);
+	width: 0;
+	height: 100%;
+	background: #8e44ad;
+	z-index: -1;
+	transition: width 150ms ease-in-out;
+}
+
+.fourth:hover:after {
+	width: 110%;
+}
+
+.img-container img {
+	width: 100%;
+	height: 600px;
+	position: relative;
+	object-fit: cover;
+}
+
+.content-box {
+	width: 40%;
+	padding: 20px 30px;
+	position: absolute;
+	top: 35%;
+	left: 30%;
+	color: #fff;
+}
+
+.text {
+	padding: 10px 30px;
+	box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.register {
+	border-color: #ada8a5;
+	color: #fff;
+	background-image: linear-gradient(45deg, #ada8a5 50%, transparent 50%);
+	background-position: 100%;
+	background-size: 400%;
+	transition: background 300ms ease-in-out;
+	margin: 20px 0;
+}
+
+.register:hover {
+	border-color: #ada8a5;
+	background-position: 0%;
+	color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+	.content-box {
+		width: 80%;
+		padding: 10px 20px;
+		top: 50%;
+		left: 10%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.content-box {
+		width: 90%;
+		top: 60%;
+		left: 5%;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.content-box {
+		width: 90%;
+		top: 80%;
+		left: 5%;
+	}
+}
