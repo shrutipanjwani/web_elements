@@ -10,3 +10,68 @@
 body {
 	overflow-x: hidden;
 }
+
+.carousel {
+	position: relative;
+	width: 60%;
+	height: 75vh;
+	margin: 0 auto;
+}
+
+.carousel-track-container {
+	height: 100%;
+	position: relative;
+}
+
+.carousel-track {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.carousel-slide {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.carousel-btn {
+	position: absolute;
+	top: 40vh;
+	transform: translateY(-50%);
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	font-size: 22px;
+}
+
+.btn-left {
+	left: -35px;
+}
+
+.btn-right {
+	right: -35px;
+}
+
+.carousel-nav {
+	text-align: center;
+	padding: 10px 0;
+}
+
+.carousel-indicator {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	border: none;
+	outline: none;
+}
+
+.current-slide,
+.carousel-indicator:hover {
+	background-color: #717171;
+}
