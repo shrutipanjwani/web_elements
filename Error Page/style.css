@@ -10,3 +10,46 @@
 body {
 	overflow-x: hidden;
 }
+
+.error-container {
+	width: 90%;
+	height: 90vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: auto;
+}
+
+.error-container .left {
+	width: 30%;
+	margin: auto;
+}
+
+.error-container .left h1 {
+	font-size: 4rem;
+}
+
+.error-container .left p {
+	font-size: 2rem;
+}
+
+.error-container .left .btn {
+	padding: 5px 20px;
+	font-size: 1.5rem;
+	border: 2px solid #6c63ff;
+	border-radius: 4px;
+	outline: none;
+	background: none;
+	text-transform: uppercase;
+	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.error-container .left .btn:hover {
+	box-shadow: 0px 0px 40px 40px #6c63ff inset;
+	color: #fff;
+}
+
+.error-container .right {
+	width: 40%;
+	margin: auto;
+}
