@@ -7,5 +7,126 @@
 		<link rel="stylesheet" href="style.css" />
 		<title>Gallery</title>
 	</head>
-	<body> </body>
+	<body>
+		<div class="container">
+			<br />
+			<h1>My Work</h1>
+			<div class="waterfall">
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?1" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?2" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?3" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?4" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?5" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?6" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?7" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?8" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?9" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?10" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?11" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?12" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?13" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?14" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?15" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<img src="//source.unsplash.com/featured?16" />
+						<span class="circle">View Project</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<script>
+			const observer = new IntersectionObserver(f, {
+				threshold: [0, 1],
+			});
+
+			function f(entries) {
+				for (const entry of entries) {
+					if (entry.isIntersecting && entry.intersectionRatio >= 1) {
+						entry.target.classList.toggle("inbound", true);
+					} else {
+						entry.target.classList.toggle("inbound", false);
+					}
+				}
+			}
+
+			const itemEls = Array.from(document.querySelectorAll(".item"));
+			for (const itemEl of itemEls) observer.observe(itemEl);
+		</script>
+	</body>
 </html>
