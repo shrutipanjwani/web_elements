@@ -12,31 +12,50 @@
 		<title>Carousel</title>
 	</head>
 	<body>
-		<div class="carousel">
-			<button class="carousel-btn btn-left" onclick="plusSlides(-1)">
+		<div class="carousel wrap">
+			<div id="arrow-left" class="arrow"></div>
+			<div id="slider">
+				<div class="slide slide1">
+					<div class="slide-content">
+						<span>Image One</span>
+					</div>
+				</div>
+				<div class="slide slide2">
+					<div class="slide-content">
+						<span>Image Two</span>
+					</div>
+				</div>
+				<div class="slide slide3">
+					<div class="slide-content">
+						<span>Image Three</span>
+					</div>
+				</div>
+			</div>
+			<div id="arrow-right" class="arrow"></div>
+			<!-- <button class="carousel-btn btn-left" onclick="plusSlides(-1)">
 				<i class="fa fa-chevron-left"></i>
 			</button>
 			<div class="carousel-track-container">
 				<ul class="carousel-track">
 					<li class="carousel-slide">
-						<img src="./assets/1.jpg" alt="" width="100%" />
+						<img src="./assets/1.jpg" alt="" width="100%" height="100%" />
 					</li>
 					<li class="carousel-slide">
-						<img src="./assets/2.jpg" alt="" width="100%" />
+						<img src="./assets/2.jpg" alt="" width="100%" height="100%" />
 					</li>
 					<li class="carousel-slide">
-						<img src="./assets/3.jpg" alt="" width="100%" />
+						<img src="./assets/3.jpg" alt="" width="100%" height="100%" />
 					</li>
 				</ul>
 			</div>
 			<button class="carousel-btn btn-right" onclick="plusSlides(1)">
 				<i class="fa fa-chevron-right"></i>
-			</button>
-			<div class="carousel-nav">
+			</button> -->
+			<!-- <div class="carousel-nav">
 				<span class="carousel-indicator" onclick="currentSlide(1)"></span>
 				<span class="carousel-indicator" onclick="currentSlide(2)"></span>
 				<span class="carousel-indicator" onclick="currentSlide(3)"></span>
-			</div>
+			</div> -->
 		</div>
 		<script src="./app.js"></script>
 	</body>
