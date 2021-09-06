@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Kids Zone - Digital Classroom</title>
+	</head>
+	<body>
+		<header class="header">
+			<nav class="nav">
+				<div class="logo">
+					<a href="index.html">
+						<img src="./assets/logo.png" alt="Logo Image" />
+					</a>
+				</div>
+				<div class="hamburger">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+				</div>
+				<ul class="nav-links">
+					<li><a class="nav-item" href="#home">Home</a></li>
+					<li><a class="nav-item" href="#aboutus">About Us</a></li>
+					<li><a class="nav-item" href="#classroom">Classroom</a></li>
+					<li><a class="nav-item" href="#contactus">Contact Us</a></li>
+					<li
+						><button class="btn login-button">
+							<a href="#login">Login</a>
+						</button></li
+					>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="banner" id="home">
+				<div class="banner-container">
+					<h1>Welcome to Kids Zone Digital Classroom</h1>
+					<p
+						>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
+						explicabo eum dolorum mollitia in, nobis, corporis vitae!</p
+					>
+					<button class="btn">Create Assignments</button>
+				</div>
+			</div>
+			<div class="classroom-container" id="classroom">
+				<h1>Kids Zone! Digital Classroom</h1>
+				<a href="" class="download-btn btn" download="my_painting.png"
+					>Download my painting</a
+				>
+				<div id="pen-tools" class="pen-tools">
+					<div class="drawing-colors" id="drawing-colors">
+						<div
+							class="color-circle active"
+							data-color="pink"
+							onclick="selectColor(this)"
+						></div>
+						<div
+							class="color-circle"
+							data-color="red"
+							onclick="selectColor(this)"
+						></div>
+						<div
+							class="color-circle"
+							data-color="green"
+							onclick="selectColor(this)"
+						></div>
+						<div
+							class="color-circle"
+							data-color="blue"
+							onclick="selectColor(this)"
+						></div>
+						<div
+							class="color-circle"
+							data-color="orange"
+							onclick="selectColor(this)"
+						></div>
+						<div
+							class="color-circle"
+							data-color="purple"
+							onclick="selectColor(this)"
+						></div>
+						<div
+							class="color-circle"
+							data-color="yellow"
+							onclick="selectColor(this)"
+						></div>
+						<div
+							class="color-circle"
+							data-color="black"
+							onclick="selectColor(this)"
+						></div>
+					</div>
+					<div id="fav-container">
+						<label for="favcolor">Select your favorite color:</label>
+						<input
+							type="color"
+							name="favcolor"
+							id="favcolor"
+							value="#ff0000"
+							onchange="favColor(this)"
+						/>
+					</div>
+					<div id="pen-size" class="pen-size">
+						<label for="pen-size"> Pen Size </label>
+						<input
+							type="range"
+							name="pen-size"
+							id="pen-size"
+							value="10"
+							step="5"
+							min="5"
+							max="40"
+							onchange="penSizeChange(this.value)"
+						/>
+					</div>
+				</div>
+
+				<div class="board">
+					<canvas
+						id="render"
+						width="1200"
+						height="450"
+						style="width: 90%; height: 100%"
+					></canvas>
+				</div>
+
+				<div class="tools">
+					<input
+						type="button"
+						class="button save"
+						value="Save"
+						onclick="saveDrawing()"
+					/>
+					<input
+						type="button"
+						class="button clear"
+						value="Clear"
+						onclick="clearDrawing()"
+					/>
+				</div>
+			</div>
+		</main>
+		<footer class="footer"> </footer>
+		<script src="script.js"></script>
+	</body>
+</html>
