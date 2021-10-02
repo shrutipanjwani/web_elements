@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+	--primary-color: rgb(207, 133, 35);
+	--secondary-color: #333;
+	--light-color: #fff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+*::selection {
+	background-color: var(--primary-color);
+	color: var(--light-color);
+}
+
+body {
+	overflow-x: hidden;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.card-container {
+	margin: 2rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(16rem, 0.3fr));
+	grid-gap: 2rem;
+	justify-content: center;
+}
+
+.card-container .card {
+	overflow: hidden;
+	border: 1px solid var(--secondary-color);
+	box-shadow: 4px 4px lightgrey;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	transition: border 200ms ease-in, box-shadow 200ms ease-in;
+}
+
+.card-container .card .card-image {
+	height: 20rem;
+	width: 100%;
+	object-fit: cover;
+}
+
+.card-container .card .card-title {
+	padding: 1rem;
+}
+.card-container .card .card-description {
+	padding: 0 1rem;
+}
+
+.card-container .card .card-link {
+	text-decoration: none;
+	padding: 1rem;
+	font-weight: bold;
+	color: var(--primary-color);
+}
+.card-container .card .card-link::after {
+	content: "\f061";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	position: relative;
+	left: 0.5rem;
+}
+
+.card-container .card:hover {
+	border: 1px solid var(--secondary-color);
+	box-shadow: 8px 8px var(--primary-color);
+}
+.card-container .card:hover .card-link::after {
+	animation: arrow 1s ease-in-out infinite alternate;
+}
+
+@keyframes arrow {
+	0% {
+		left: 0.5rem;
+	}
+	100% {
+		left: 1.5rem;
+	}
+}
