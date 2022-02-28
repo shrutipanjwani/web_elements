@@ -1,4 +1,4 @@
-var countDate = new Date("Jan 1, 2022 00:00:00").getTime();
+var countDate = new Date("March 2, 2022 00:00:00").getTime();
 
 function newYear() {
 	var now = new Date().getTime();

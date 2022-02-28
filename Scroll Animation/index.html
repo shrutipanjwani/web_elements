@@ -1,75 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<title>Intersection Observer API</title>
-	</head>
-	<body>
-		<section> </section>
-		<section class="content">
-			<div class="left">
-				<img
-					src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/yellow.jpg"
-					alt="Yellow"
-					class="yellow anim"
-					data-delay="0s"
-				/>
-				<p class="anim" data-delay="0.5s"
-					>I have no clue what I am doing here LOL!</p
-				>
-				<img
-					src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/squiggly.svg"
-					alt="Squig"
-					class="squig anim"
-					data-delay="0.7s"
-				/>
-			</div>
-			<div class="right">
-				<div class="anim" data-delay="1s">
-					<h2>Get Yellow</h2>
-					<p
-						>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim
-						laudantium impedit quae esse pariatur, incidunt ex id vel sit
-						accusantium ad obcaecati assumenda placeat deleniti nemo officia
-						perspiciatis. Amet, ducimus?</p
-					>
-				</div>
-			</div>
-		</section>
-		<script>
-			const elements = document.querySelectorAll(".anim");
-			observer = new IntersectionObserver((entries) => {
-				entries.forEach((entry) => {
-					if (entry.intersectionRatio > 0) {
-						entry.target.style.animation = `anim1 2s ${entry.target.dataset.delay} forwards ease-out`;
-					} else {
-						entry.target.style.animation = `none`;
-					}
-				});
-			});
-			elements.forEach((image) => {
-				observer.observe(image);
-			});
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Intersection Observer API</title>
+  </head>
+  <body>
+    <section></section>
+    <section class="content">
+      <div class="left">
+        <img
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/yellow.jpg"
+          alt="Yellow"
+          class="yellow anim"
+          data-delay="0s"
+        />
+        <p class="anim" data-delay="0.5s">
+          I have no clue what I am doing here LOL!
+        </p>
+        <img
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/squiggly.svg"
+          alt="Squig"
+          class="squig anim"
+          data-delay="0.7s"
+        />
+      </div>
+      <div class="right">
+        <div class="anim" data-delay="1s">
+          <h2>Get Yellow</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim
+            laudantium impedit quae esse pariatur, incidunt ex id vel sit
+            accusantium ad obcaecati assumenda placeat deleniti nemo officia
+            perspiciatis. Amet, ducimus?
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="content">
+      <div class="left">
+        <img
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/yellow.jpg"
+          alt="Yellow"
+          class="yellow anim"
+          data-delay="0s"
+        />
+        <p class="anim" data-delay="0.5s">
+          I have no clue what I am doing here LOL!
+        </p>
+        <img
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/squiggly.svg"
+          alt="Squig"
+          class="squig anim"
+          data-delay="0.7s"
+        />
+      </div>
+      <div class="right">
+        <div class="anim" data-delay="1s">
+          <h2>Get Yellow</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim
+            laudantium impedit quae esse pariatur, incidunt ex id vel sit
+            accusantium ad obcaecati assumenda placeat deleniti nemo officia
+            perspiciatis. Amet, ducimus?
+          </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      const elements = document.querySelectorAll(".anim");
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.intersectionRatio > 0) {
+            entry.target.style.animation = `anim1 2s ${entry.target.dataset.delay} forwards ease-out`;
+          } else {
+            entry.target.style.animation = `none`;
+          }
+        });
+      });
+      elements.forEach((image) => {
+        observer.observe(image);
+      });
 
-			// Fade in/Reveal elements on scroll with class of reveal and active with css
+      // Fade in/Reveal elements on scroll with class of reveal and active with css
 
-			// window.addEventListener("scroll", reveal);
-			// function reveal() {
-			// 	var reveals = document.querySelectorAll("reveal");
-			// 	for (var i = 0; i < reveals.length; i++) {
-			// 		var windowHeight = window.innerHeight;
-			// 		var revealTop = reveals[i].getBoundingClientRect().top;
-			// 		var revealPoint = 150;
-			// 		if (revealTop < windowHeight - revealPoint) {
-			// 			reveals[i].classList.add("active");
-			// 		} else {
-			// 			reveals[i].classList.remove("active");
-			// 		}
-			// 	}
-			// }
-		</script>
-	</body>
+      // window.addEventListener("scroll", reveal);
+      // function reveal() {
+      // 	var reveals = document.querySelectorAll("reveal");
+      // 	for (var i = 0; i < reveals.length; i++) {
+      // 		var windowHeight = window.innerHeight;
+      // 		var revealTop = reveals[i].getBoundingClientRect().top;
+      // 		var revealPoint = 150;
+      // 		if (revealTop < windowHeight - revealPoint) {
+      // 			reveals[i].classList.add("active");
+      // 		} else {
+      // 			reveals[i].classList.remove("active");
+      // 		}
+      // 	}
+      // }
+    </script>
+  </body>
 </html>

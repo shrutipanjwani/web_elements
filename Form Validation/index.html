@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<title>Form Validation</title>
-	</head>
-	<body>
-		<form id="form">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <form action="" name="myForm" onsubmit="return(validate());">
+      <h1>USER REGISTRATION</h1>
+      <div class="input-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" />
+      </div>
+      <div class="input-group">
+        <label for="email">E-mail</label>
+        <input id="email" type="text" name="email" />
+      </div>
+      <div class="input-group">
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="text" name="phone" />
+      </div>
+      <!-- <div class="input-group">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="0" selected>Select</option>
+          <option value="1">HTML</option>
+          <option value="2">JavaScript</option>
+          <option value="3">CSS</option>
+          <option value="4">JSP</option>
+        </select>
+      </div> -->
+
+      <p id="error"></p>
+
+      <div class="input-group">
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+    <!-- <form id="form">
 			<div class="input">
 				<input type="text" placeholder="Enter your name" id="name" />
 				<small>Error message</small>
@@ -28,7 +59,7 @@
 			<div class="input">
 				<input type="submit" value="Submit" id="submit" />
 			</div>
-		</form>
-		<script src="./script.js"></script>
-	</body>
+		</form> -->
+    <script src="./script.js"></script>
+  </body>
 </html>
